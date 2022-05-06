@@ -1,0 +1,57 @@
+/*
+ * Port_cfg.h
+ *
+ *  Created on: Mar 7, 2022
+ *      Author: fady
+ */
+
+#ifndef PORT_CFG_H_
+#define PORT_CFG_H_
+
+/**
+ * @ OPTIONS:-
+ * 	1-PORT_u8OUTPUT_HIGH
+ *	2-PORT_u8OUTPUT_LOW
+ *	3-PORT_u8INPUT_PULLUP
+ *	4-PORT_u8INPUT_IMPEDENCE
+ */
+
+	/*PORTA*/
+#define PORT_u8MODEPIN00            PORT_u8INPUT_IMPEDENCE
+#define PORT_u8MODEPIN01            PORT_u8INPUT_PULLUP
+#define PORT_u8MODEPIN02            PORT_u8INPUT_PULLUP
+#define PORT_u8MODEPIN03            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN04            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN05            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN06            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN07            PORT_u8INPUT_PULLUP
+	/*PORTB*/
+#define PORT_u8MODEPIN08            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN09            PORT_u8INPUT_PULLUP
+#define PORT_u8MODEPIN10            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN11            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN12            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN13            PORT_u8INPUT_IMPEDENCE
+#define PORT_u8MODEPIN14            PORT_u8INPUT_IMPEDENCE
+#define PORT_u8MODEPIN15            PORT_u8INPUT_PULLUP
+	/*PORTC*/
+#define PORT_u8MODEPIN16            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN17            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN18            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN19            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN20            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN21            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN22            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN23            PORT_u8OUTPUT_HIGH
+	/*PORTD*/
+#define PORT_u8MODEPIN24            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN25            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN26            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN27            PORT_u8INPUT_PULLUP
+#define PORT_u8MODEPIN28            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN29            PORT_u8OUTPUT_LOW
+#define PORT_u8MODEPIN30            PORT_u8INPUT_IMPEDENCE
+#define PORT_u8MODEPIN31			PORT_u8INPUT_IMPEDENCE
+
+
+#endif /* PORT_CFG_H_ */
