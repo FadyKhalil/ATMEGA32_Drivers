@@ -30,7 +30,7 @@ void Icu_vidDisableInterrupt(void);
 
 void Icu_vidChangeTrigger(Icu_Edge Copy_u8TriggerSource);
 
-void Icu_vidReadValue(pu8 Add_pu8Value);
+void Icu_vidReadValue(pu16 Add_pu16Value);
 
 
 

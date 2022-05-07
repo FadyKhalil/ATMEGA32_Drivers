@@ -8,7 +8,6 @@
 
 #include "../../Service/UTILITIES/Std_types.h"
 #include "avr/io.h"
-#include "avr/interrupt.h"
 #include "Icu.h"
 
 
@@ -25,6 +24,9 @@ void Icu_vidInit(void)
 
 	/*Enbale Interrupt*/
 	TIMSK |= (1 << 5);
+
+	/*Enable Clock*/
+	TCCR1B |= 3;
 }
 
 void Icu_vidRegisterCallBack(Icu_CallFunc Cbf)
@@ -62,13 +64,14 @@ void Icu_vidChangeTrigger(Icu_Edge Copy_u8TriggerSource)
 	}
 }
 
-void Icu_vidReadValue(pu8 Add_pu8Value)
+void Icu_vidReadValue(pu16 Add_pu16Value)
 {
-	*Add_pu8Value = ICR1;
+	*Add_pu16Value = ICR1;
 }
 
 
-ISR(TIMER1_CAPT_vect)
+void __vector_6 (void) __attribute__ ((signal, used));
+void __vector_6 (void)
 {
 	if(Callfunc)
 	{
