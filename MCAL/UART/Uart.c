@@ -75,7 +75,7 @@ Uart_tenuErrorStatus Uart_enuSendData(const u16 Copy_u8Data)
 }
 
 
-Uart_tenuErrorStatus Uart_enuSendBuffer(const u8* Copy_u8Data, u8 Copy_u8Size)
+Uart_tenuErrorStatus Uart_enuSendBuffer(const s8* Copy_u8Data, u8 Copy_u8Size)
 {
 	Uart_tenuErrorStatus Loc_enuErrorStatus = Uart_enuDataSent;
 	if(Uart_BuzyFlag[Transmit] == 0)
@@ -149,11 +149,14 @@ void __vector_15 (void)
 {
 	static u8 Index = 0;
 
-	if(Uart_prvCallBack[Transmit] != NULL && Index == Uart_prvIndex)
+	if(Index == Uart_prvIndex)
 	{
 		Uart_BuzyFlag[Transmit] = 0;
 		Index = 0;
-		Uart_prvCallBack[Transmit]();
+		if(Uart_prvCallBack[Transmit])
+		{
+			Uart_prvCallBack[Transmit]();
+		}
 	}
 	else
 	{

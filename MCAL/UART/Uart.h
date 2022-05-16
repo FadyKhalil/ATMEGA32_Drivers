@@ -101,6 +101,8 @@ Uart_tenuErrorStatus Uart_enuReceiveData(const pu16 Add_u8Data);
 
 Uart_tenuErrorStatus Uart_RegisterCallBackFunction(Uart_IntChannel Int_Id, Uart_Cbf Cbf);
 
+Uart_tenuErrorStatus Uart_enuSendBuffer(const s8* Copy_u8Data, u8 Copy_u8Size);
+
 
 
 #endif /* UART_H_ */
